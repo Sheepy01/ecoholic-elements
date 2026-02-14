@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoholix India - Turning Waste into Resources, Sustainability into Profit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #00A86B;
+            --deep-green: #006B4A;
+            --light-green: #E8F5E9;
+            --accent-blue: #0077BE;
+            --dark-blue: #004D7A;
+            --neutral-dark: #1A1A1A;
+            --neutral-gray: #4A4A4A;
+            --neutral-light: #F8F9FA;
+            --white: #FFFFFF;
+            --gradient-primary: linear-gradient(135deg, #00A86B 0%, #0077BE 100%);
+            --gradient-accent: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 168, 107, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            font-size: 1.25rem;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--neutral-dark);
+            font-weight: 800;
+        }
+        
+        .logo-text p {
+            font-size: 0.7rem;
+            color: var(--neutral-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--neutral-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-cta {
+            background: var(--gradient-primary);
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 168, 107, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 4rem;
+            background: var(--gradient-accent);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,168,107,0.05)" stroke-width="1"/></pattern></defs><rect width="800" height="800" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-20px) translateX(10px); }
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--neutral-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content h1 span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--neutral-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            animation: slideUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.4s backwards;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 168, 107, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 168, 107, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+        }
+        
+        .hero-visual {
+            position: relative;
+            animation: slideUp 0.8s ease-out 0.6s backwards;
+        }
+        
+        .hero-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--gradient-accent);
+            border-radius: 12px;
+            border: 2px solid rgba(0, 168, 107, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            font-family: 'Sora', sans-serif;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--neutral-gray);
+            margin-top: 0.5rem;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--light-green);
+            color: var(--primary-green);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            color: var(--neutral-dark);
+        }
+        
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--neutral-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--neutral-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mv-card {
+            padding: 2rem;
+            background: var(--gradient-accent);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .mv-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-green);
+        }
+        
+        .mv-card p {
+            color: var(--neutral-gray);
+            font-size: 1rem;
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: var(--neutral-dark);
+            color: white;
+        }
+        
+        .problem .section-title {
+            color: white;
+        }
+        
+        .problem .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .problem-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary-green);
+        }
+        
+        .problem-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .problem-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+        
+        .problem-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+        
+        /* Solution Section */
+        .solution-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .flow-step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .flow-step::after {
+            content: '→';
+            position: absolute;
+            right: -2rem;
+            top: 30%;
+            font-size: 2rem;
+            color: var(--primary-green);
+            font-weight: 800;
+        }
+        
+        .flow-step:last-child::after {
+            display: none;
+        }
+        
+        .flow-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 168, 107, 0.3);
+        }
+        
+        .flow-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--neutral-dark);
+        }
+        
+        .flow-step p {
+            font-size: 0.9rem;
+            color: var(--neutral-gray);
+        }
+        
+        /* Process Section */
+        .process {
+            background: var(--gradient-accent);
+        }
+        
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-top: 4px solid var(--primary-green);
+            transition: all 0.3s ease;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 168, 107, 0.15);
+        }
+        
+        .process-number {
+            position: absolute;
+            top: -20px;
+            left: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
+        }
+        
+        .process-card h4 {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--neutral-dark);
+        }
+        
+        .process-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Technology Section */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tech-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 2px solid var(--light-green);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 168, 107, 0.15);
+        }
+        
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-green);
+            color: var(--primary-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--neutral-dark);
+        }
+        
+        .tech-card p {
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Revenue Model */
+        .revenue {
+            background: var(--deep-green);
+            color: white;
+        }
+        
+        .revenue .section-title,
+        .revenue .section-tag {
+            color: white;
+        }
+        
+        .revenue .section-tag {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .revenue .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .revenue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .revenue-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .revenue-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px);
+        }
+        
+        .revenue-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .revenue-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .revenue-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        .revenue-highlight {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .revenue-highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .product-card {
+            background: var(--gradient-accent);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 2px solid rgba(0, 168, 107, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 168, 107, 0.15);
+            border-color: var(--primary-green);
+        }
+        
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-green);
+        }
+        
+        .product-arrow {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin: 0.5rem 0;
+        }
+        
+        .product-list {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+        
+        .product-list li {
+            padding: 0.4rem 0;
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+        
+        .product-list li::before {
+            content: '✓ ';
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .products-tagline {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-top: 4rem;
+            font-family: 'Sora', sans-serif;
+        }
+        
+        /* Carbon & EPR Section */
+        .carbon {
+            background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 50%, #E8F5E9 100%);
+        }
+        
+        .carbon-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+        
+        .carbon-feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .carbon-feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-green);
+        }
+        
+        .carbon-feature p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Impact Section */
+        .impact {
+            background: var(--neutral-dark);
+            color: white;
+        }
+        
+        .impact .section-title {
+            color: white;
+        }
+        
+        .impact .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .impact-stat {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 2px solid rgba(0, 168, 107, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .impact-stat:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary-green);
+        }
+        
+        .impact-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-family: 'Sora', sans-serif;
+        }
+        
+        .impact-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .impact-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .impact-feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .impact-feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+        
+        .impact-feature p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Scalability Section */
+        .scalability-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+        
+        .scalability-points {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .scalability-point {
+            background: var(--light-green);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .scalability-point h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green);
+        }
+        
+        .scalability-map {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .map-visual {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .expansion-path {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        
+        /* Services Section */
+        .services {
+            background: var(--gradient-accent);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 168, 107, 0.15);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
+        }
+        
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--neutral-dark);
+        }
+        
+        .service-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Clients Section */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .client-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--light-green);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .client-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 168, 107, 0.1);
+        }
+        
+        .client-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .client-name {
+            font-weight: 600;
+            color: var(--neutral-dark);
+        }
+        
+        /* Hybrid Model Section */
+        .hybrid {
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--dark-blue) 100%);
+            color: white;
+        }
+        
+        .hybrid .section-title {
+            color: white;
+        }
+        
+        .hybrid .section-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .hybrid .section-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hybrid-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .hybrid-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .hybrid-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hybrid-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hybrid-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .hybrid-card li {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hybrid-card li::before {
+            content: '→ ';
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .hybrid-benefits {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+        }
+        
+        .hybrid-benefits h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--gradient-accent);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--neutral-dark);
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-item-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--neutral-dark);
+        }
+        
+        .contact-item-content p {
+            color: var(--neutral-gray);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--neutral-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--light-green);
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 168, 107, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--neutral-dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        
+        .footer-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .sustainability-pledge {
+            background: rgba(0, 168, 107, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container,
+            .about-content,
+            .carbon-content,
+            .scalability-content,
+            .contact-container,
+            .hybrid-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .solution-flow {
+                flex-direction: column;
+            }
+            
+            .flow-step::after {
+                display: none;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Live Counter Animation */
+        @keyframes countUp {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .metric-value {
+            animation: countUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">E</div>
+                <div class="logo-text">
+                    <h1>Ecoholix</h1>
+                    <p>India Pvt. Ltd.</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact" class="nav-cta">Partner With Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    <span>Smart Waste Collection</span><br>
+                    & Circular Resource Platform
+                </h1>
+                <p>
+                    We convert commercial waste into valuable products, revenue, and measurable environmental impact. Turning waste into resources. Turning sustainability into profit.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Partner With Us</a>
+                    <a href="#solution" class="btn btn-secondary">Request Demo</a>
+                    <a href="#contact" class="btn btn-secondary">Download Proposal</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <h3 style="text-align: center; color: var(--neutral-dark); margin-bottom: 1rem;">Live Impact Metrics</h3>
+                    <div class="metric-grid">
+                        <div class="metric">
+                            <div class="metric-value">2.5K+</div>
+                            <div class="metric-label">Tonnes Recycled</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">150+</div>
+                            <div class="metric-label">Corporate Partners</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">1.2M kg</div>
+                            <div class="metric-label">CO₂ Reduced</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">500+</div>
+                            <div class="metric-label">Jobs Created</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">About Ecoholix</span>
+                <h2 class="section-title">Building India's Circular Economy</h2>
+                <p class="section-description">
+                    We treat waste as a resource, not garbage. Through technology-enabled collection and smart recycling, we partner with hotels, hospitals, malls, restaurants, and offices to create a sustainable, profitable future.
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>🌍 Who We Are</h3>
+                    <p>
+                        Ecoholix India is a sustainability-driven waste management and circular economy startup based in Patna, Bihar. We combine technology, innovation, and business acumen to transform how cities handle waste.
+                    </p>
+                    <p>
+                        Our platform connects commercial waste generators with smart collection systems, digital tracking, and advanced recycling facilities—creating value at every step while reducing environmental impact.
+                    </p>
+                    <p>
+                        We don't just manage waste. We build profitable circular economy systems where sustainability drives growth.
+                    </p>
+                </div>
+                <div class="mission-vision">
+                    <div class="mv-card">
+                        <h4>🎯 Our Mission</h4>
+                        <p>Build a circular economy in Indian cities through technology-enabled waste collection, recycling, and resource recovery systems.</p>
+                    </div>
+                    <div class="mv-card">
+                        <h4>🚀 Our Vision</h4>
+                        <p>Create zero landfill cities powered by smart recycling infrastructure, where every kilogram of waste becomes a resource.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="problem">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">The Challenge</span>
+                <h2 class="section-title">India's Waste Crisis</h2>
+                <p class="section-description">
+                    Our cities generate over 150,000 tonnes of waste daily. Without proper systems, this creates environmental, health, and compliance challenges.
+                </p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🗑️</div>
+                    <h4>Mixed Waste Generation</h4>
+                    <p>Unsegregated waste reduces recycling efficiency and increases processing costs</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏔️</div>
+                    <h4>Landfill Dumping</h4>
+                    <p>90% of waste ends up in landfills, releasing methane and contaminating groundwater</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">☠️</div>
+                    <h4>Pollution & Health Risks</h4>
+                    <p>Air pollution, soil contamination, and disease spread from improper waste handling</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h4>No Digital Tracking</h4>
+                    <p>Businesses lack visibility into waste volumes, disposal methods, and compliance status</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⚖️</div>
+                    <h4>EPR Compliance Challenges</h4>
+                    <p>Companies struggle to meet Extended Producer Responsibility regulations and ESG targets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Solution</span>
+                <h2 class="section-title">Smart, Tech-Enabled Circular System</h2>
+                <p class="section-description">
+                    We provide end-to-end waste management infrastructure with digital tracking, compliance reporting, and revenue generation from recycled materials.
+                </p>
+            </div>
+            <div class="solution-flow">
+                <div class="flow-step">
+                    <div class="flow-icon">🏢</div>
+                    <h4>Generate</h4>
+                    <p>Commercial waste at source</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">📦</div>
+                    <h4>Collect</h4>
+                    <p>QR-coded smart bins</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">📱</div>
+                    <h4>Track</h4>
+                    <p>Mobile app monitoring</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">♻️</div>
+                    <h4>Process</h4>
+                    <p>Segregate & recycle</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">🌱</div>
+                    <h4>Recycle</h4>
+                    <p>Create new products</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">💰</div>
+                    <h4>Sell</h4>
+                    <p>Generate revenue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Six Simple Steps to Zero Waste</h2>
+            </div>
+            <div class="process-timeline">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h4>Install Smart Bins</h4>
+                    <p>We deploy QR-coded segregation bins at your facility with color-coded categories for organic, plastic, paper, and metal waste.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h4>Scheduled Pickups</h4>
+                    <p>Our collection vehicles arrive on schedule. Drivers scan QR codes to log pickup time, weight, and waste categories via mobile app.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h4>Waste Segregation</h4>
+                    <p>At our facility, trained workers further segregate materials using conveyor systems and quality control processes.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h4>Process at Facility</h4>
+                    <p>Organic waste goes to composting. Plastics are cleaned and shredded. Paper is baled. Metals are sorted and sold.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">5</div>
+                    <h4>Sell Recycled Products</h4>
+                    <p>We sell compost, plastic flakes, recycled materials, and bio-feedstock to manufacturers and agricultural markets.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">6</div>
+                    <h4>Generate Reports</h4>
+                    <p>Clients receive monthly dashboards with waste diversion rates, carbon credits earned, and EPR compliance certificates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Technology & Innovation</span>
+                <h2 class="section-title">Powered by Smart Technology</h2>
+                <p class="section-description">
+                    Our digital platform provides end-to-end visibility, optimization, and compliance tracking for all stakeholders.
+                </p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">📱</div>
+                    <h4>Mobile Apps</h4>
+                    <p>Separate apps for clients and drivers with real-time tracking, scheduling, and notifications</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔍</div>
+                    <h4>QR Code Scanning</h4>
+                    <p>Every bin and pickup is tracked via QR codes for full audit trail and transparency</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🗺️</div>
+                    <h4>GPS Route Optimization</h4>
+                    <p>AI-powered routing reduces fuel costs and ensures efficient collection schedules</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <h4>Cloud Dashboard</h4>
+                    <p>Web-based control panel for clients to monitor waste volumes, costs, and environmental impact</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📊</div>
+                    <h4>Real-Time Tracking</h4>
+                    <p>Live updates on collection status, vehicle location, and processing milestones</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌍</div>
+                    <h4>Carbon Credit Monitoring</h4>
+                    <p>Automated calculation of emissions avoided through diversion from landfills</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📄</div>
+                    <h4>EPR Certificate Generation</h4>
+                    <p>Instant compliance reports for Extended Producer Responsibility regulations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Model -->
+    <section class="revenue">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Business Model</span>
+                <h2 class="section-title">Multiple Revenue Streams</h2>
+                <p class="section-description">
+                    Our diversified business model creates stable, high-margin revenue while maximizing environmental impact.
+                </p>
+            </div>
+            <div class="revenue-grid">
+                <div class="revenue-card">
+                    <div class="revenue-icon">📋</div>
+                    <h4>Service Contracts</h4>
+                    <p>Monthly subscriptions from hotels, hospitals, restaurants, malls, and offices for waste collection and management</p>
+                </div>
+                <div class="revenue-card">
+                    <div class="revenue-icon">♻️</div>
+                    <h4>Recycled Materials Sales</h4>
+                    <p>Revenue from selling plastic flakes, paper bales, metal scrap to manufacturing industries</p>
+                </div>
+                <div class="revenue-card">
+                    <div class="revenue-icon">🌱</div>
+                    <h4>Compost & Bio-Products</h4>
+                    <p>Sales of organic compost, vermicompost, and bio-feedstock to agriculture and horticulture sectors</p>
+                </div>
+                <div class="revenue-card">
+                    <div class="revenue-icon">🌍</div>
+                    <h4>Carbon Credits</h4>
+                    <p>Verified emissions reduction credits sold to corporations meeting carbon neutrality targets</p>
+                </div>
+                <div class="revenue-card">
+                    <div class="revenue-icon">✅</div>
+                    <h4>EPR Compliance Services</h4>
+                    <p>Certification and reporting services for companies meeting regulatory Extended Producer Responsibility requirements</p>
+                </div>
+            </div>
+            <div class="revenue-highlight">
+                <h3>💼 Stable & High Margin Business</h3>
+                <p>Recurring revenue + material sales + carbon credits = Predictable, scalable growth</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products From Waste -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Products & Outputs</span>
+                <h2 class="section-title">Waste is Raw Material</h2>
+                <p class="section-description">
+                    Every kilogram of waste becomes a valuable product with market demand.
+                </p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🥬</div>
+                    <h4>Organic Waste</h4>
+                    <div class="product-arrow">↓</div>
+                    <ul class="product-list">
+                        <li>Organic Compost</li>
+                        <li>Vermicompost</li>
+                        <li>Biogas Production</li>
+                        <li>Bio-Feedstock</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🧴</div>
+                    <h4>Plastic Waste</h4>
+                    <div class="product-arrow">↓</div>
+                    <ul class="product-list">
+                        <li>Plastic Flakes</li>
+                        <li>Recycled Boards</li>
+                        <li>Upcycled Products</li>
+                        <li>Construction Materials</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📰</div>
+                    <h4>Paper Waste</h4>
+                    <div class="product-arrow">↓</div>
+                    <ul class="product-list">
+                        <li>Paper Bales</li>
+                        <li>Recycled Pulp</li>
+                        <li>Cardboard Sheets</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🛢️</div>
+                    <h4>Used Oil</h4>
+                    <div class="product-arrow">↓</div>
+                    <ul class="product-list">
+                        <li>Biodiesel</li>
+                        <li>Industrial Lubricants</li>
+                        <li>Energy Production</li>
+                    </ul>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🌍</div>
+                    <h4>Carbon Reduction</h4>
+                    <div class="product-arrow">↓</div>
+                    <ul class="product-list">
+                        <li>Verified Carbon Credits</li>
+                        <li>ESG Compliance Reports</li>
+                        <li>Emission Certificates</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="products-tagline">
+                "What the world calls waste, we call opportunity."
+            </div>
+        </div>
+    </section>
+
+    <!-- Carbon & EPR Section -->
+    <section class="carbon">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Environmental Impact</span>
+                <h2 class="section-title">Carbon Credits & EPR Compliance</h2>
+                <p class="section-description">
+                    We help businesses meet sustainability goals while generating verified carbon credits and compliance certificates.
+                </p>
+            </div>
+            <div class="carbon-content">
+                <div>
+                    <div class="carbon-feature">
+                        <h4>🌍 Less Landfill = Less Methane</h4>
+                        <p>Every tonne diverted from landfills prevents methane emissions—a greenhouse gas 25x more potent than CO₂</p>
+                    </div>
+                    <div class="carbon-feature">
+                        <h4>✅ Verified Emissions Reduction</h4>
+                        <p>Our processes are third-party verified for carbon credit generation under international standards</p>
+                    </div>
+                    <div class="carbon-feature">
+                        <h4>💰 Carbon Credits Sold</h4>
+                        <p>Credits can be sold to companies needing offsets or retained for your own carbon neutrality claims</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="carbon-feature">
+                        <h4>📄 EPR Compliance Certificates</h4>
+                        <p>Instant digital certificates proving compliance with Extended Producer Responsibility regulations</p>
+                    </div>
+                    <div class="carbon-feature">
+                        <h4>🏢 Brand ESG Benefits</h4>
+                        <p>Strengthen ESG ratings, corporate sustainability reports, and stakeholder confidence</p>
+                    </div>
+                    <div class="carbon-feature">
+                        <h4>🔍 Full Transparency</h4>
+                        <p>Blockchain-backed tracking ensures every kilogram of waste is accounted for and verified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Impact</span>
+                <h2 class="section-title">Creating Jobs, Protecting Planet</h2>
+                <p class="section-description">
+                    Measurable environmental and social impact across every dimension of our operations.
+                </p>
+            </div>
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <div class="impact-number">500+</div>
+                    <div class="impact-label">Jobs Created</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">2,500</div>
+                    <div class="impact-label">Tonnes Diverted from Landfill</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">1.2M</div>
+                    <div class="impact-label">Kg CO₂ Reduced</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">85%</div>
+                    <div class="impact-label">Recycling Rate</div>
+                </div>
+            </div>
+            <div class="impact-features">
+                <div class="impact-feature">
+                    <h4>♻️ Waste Picker Inclusion</h4>
+                    <p>We integrate informal waste workers into formal supply chains with fair wages, safety equipment, and dignity</p>
+                </div>
+                <div class="impact-feature">
+                    <h4>👩 Women SHG Empowerment</h4>
+                    <p>Partnership with Women Self-Help Groups for segregation work, providing economic independence and skill development</p>
+                </div>
+                <div class="impact-feature">
+                    <h4>🎓 Skill Development</h4>
+                    <p>Training programs in waste management, recycling technology, and entrepreneurship for local communities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scalability Section -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Growth Strategy</span>
+                <h2 class="section-title">Built to Scale Across India</h2>
+                <p class="section-description">
+                    Our asset-light, software-driven model can be replicated city by city with minimal capital requirements.
+                </p>
+            </div>
+            <div class="scalability-content">
+                <div class="scalability-points">
+                    <div class="scalability-point">
+                        <h4>💡 Asset-Light Model</h4>
+                        <p>Technology platform can be deployed rapidly without heavy infrastructure investment in each new city</p>
+                    </div>
+                    <div class="scalability-point">
+                        <h4>📱 Software-Driven</h4>
+                        <p>Core value comes from digital systems, data analytics, and network effects—not physical assets</p>
+                    </div>
+                    <div class="scalability-point">
+                        <h4>🔄 Replicable City-by-City</h4>
+                        <p>Standardized playbook for market entry, client acquisition, and operations setup in new geographies</p>
+                    </div>
+                    <div class="scalability-point">
+                        <h4>🗺️ Expansion Roadmap</h4>
+                        <p>Starting with Patna, expanding across Bihar, then to tier-2 and tier-1 cities nationwide</p>
+                    </div>
+                </div>
+                <div class="scalability-map">
+                    <div class="map-visual">🗺️</div>
+                    <h3 style="color: var(--neutral-dark); margin-bottom: 1rem;">Expansion Path</h3>
+                    <div class="expansion-path">
+                        <span>Patna</span>
+                        <span>→</span>
+                        <span>Bihar</span>
+                        <span>→</span>
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Comprehensive Waste Management Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚛</div>
+                    <h4>Smart Collection</h4>
+                    <p>QR-coded bins, scheduled pickups, GPS-tracked vehicles, and mobile app for real-time monitoring</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">♻️</div>
+                    <h4>Recycling & Processing</h4>
+                    <p>Advanced segregation, material recovery, and processing at certified recycling facilities</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h4>Composting</h4>
+                    <p>Organic waste conversion into high-quality compost and vermicompost for agriculture</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h4>Compliance Reporting</h4>
+                    <p>Automated dashboards, monthly reports, and audit-ready documentation for regulatory requirements</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h4>Carbon Credits</h4>
+                    <p>Verified carbon credit generation and certification for emission reduction claims</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✅</div>
+                    <h4>EPR Support</h4>
+                    <p>Full Extended Producer Responsibility compliance management and certificate generation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Partners</span>
+                <h2 class="section-title">Trusted by Leading Organizations</h2>
+            </div>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-icon">🏨</div>
+                    <div class="client-name">Hotels</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏥</div>
+                    <div class="client-name">Hospitals</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🍽️</div>
+                    <div class="client-name">Restaurants</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🛍️</div>
+                    <div class="client-name">Malls</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏢</div>
+                    <div class="client-name">Corporate Offices</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏛️</div>
+                    <div class="client-name">Government Bodies</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">🏭</div>
+                    <div class="client-name">Brands & Manufacturers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hybrid Model Section -->
+    <section class="hybrid">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Governance</span>
+                <h2 class="section-title">Hybrid NGO + Company Model</h2>
+                <p class="section-description">
+                    Combining social mission with financial sustainability for maximum impact and transparency.
+                </p>
+            </div>
+            <div class="hybrid-grid">
+                <div class="hybrid-card">
+                    <div class="hybrid-icon">🤝</div>
+                    <h4>NGO Arm</h4>
+                    <ul>
+                        <li>Community awareness programs</li>
+                        <li>CSR project implementation</li>
+                        <li>Waste picker welfare initiatives</li>
+                        <li>Educational campaigns</li>
+                        <li>Skill development training</li>
+                    </ul>
+                </div>
+                <div class="hybrid-card">
+                    <div class="hybrid-icon">💼</div>
+                    <h4>Private Limited Company</h4>
+                    <ul>
+                        <li>Commercial operations</li>
+                        <li>Revenue generation</li>
+                        <li>Technology development</li>
+                        <li>Client servicing</li>
+                        <li>Scalable infrastructure</li>
+                    </ul>
+                </div>
+                <div class="hybrid-benefits">
+                    <h4>Benefits of Hybrid Structure</h4>
+                    <p>Complete transparency + Financial sustainability + Social impact + Tax efficiency + Investor confidence + Government partnership opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Build a Zero-Waste City Together</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Partner With Us</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-content">
+                                <h4>Office Location</h4>
+                                <p>Patna, Bihar, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-content">
+                                <h4>Phone</h4>
+                                <p>+91 XXXXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div class="contact-item-content">
+                                <h4>Email</h4>
+                                <p>contact@ecoholix.in</p>
+                                <p>partnerships@ecoholix.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="organization">Organization *</label>
+                            <input type="text" id="organization" name="organization" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-type">Partnership Type *</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select...</option>
+                                <option value="corporate">Corporate Client</option>
+                                <option value="investor">Investor</option>
+                                <option value="government">Government Agency</option>
+                                <option value="csr">CSR Partnership</option>
+                                <option value="vendor">Vendor/Supplier</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Ecoholix India</h3>
+                    <p>Turning waste into resources. Turning sustainability into profit. Building India's circular economy, one city at a time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">📸</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#solution">Our Solution</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Smart Collection</a></li>
+                        <li><a href="#services">Recycling</a></li>
+                        <li><a href="#services">Composting</a></li>
+                        <li><a href="#services">Carbon Credits</a></li>
+                        <li><a href="#services">EPR Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Download Brochure</a></li>
+                        <li><a href="#">CSR Programs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sustainability-pledge">
+                🌍 Committed to UN Sustainable Development Goals: SDG 11 (Sustainable Cities), SDG 12 (Responsible Consumption), SDG 13 (Climate Action)
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ecoholix India Pvt. Ltd. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
