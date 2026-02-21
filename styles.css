@@ -109,8 +109,15 @@ nav.scrolled {
     width: 100%;                   /* Full width */
     background-image: url('images/ecoholic_wallpaper.png');
     background-size: cover;        /* Cover full area */
-    background-position: center;   /* Center image */
+    background-position: center center;   /* Center image */
     background-repeat: no-repeat;  /* Prevent repeating */
+}
+
+@media (max-width: 768px) {
+    .landing-section {
+        background-size: cover;
+        background-position: 15% center; 
+    }
 }
 
 /* Hero Section */
